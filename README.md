@@ -1,5 +1,5 @@
 # Pong-Online
-A complete implementation of pong using my game engine, which will include menus and most importantly online play using servers!
+A complete implementation of pong using my game engine!
 
   ![](https://img.shields.io/badge/made%20by-DarienMiller-blue)
   ![](https://img.shields.io/badge/test-passing-green)
@@ -19,7 +19,7 @@ Simple and Fast Media Library (SFML) desktop app implemenation of Pong, nothing 
 ![2 player pong](https://user-images.githubusercontent.com/32966645/99610001-f54ee900-29de-11eb-8c42-78be293f6366.gif)
 
 ## Installation
-  C++11 and SFML are needed to run the project
+  C++11 and SFML are needed to run the project. 
   
   ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
