@@ -3,13 +3,11 @@
 #include "SFML Game engine/Asset Manager/AssetManager.h"
 #include <iostream>
 
-Settings::Settings(const sf::Vector2u &windowSize, StateManager &manager) : GameState(windowSize, manager),
+Settings::Settings(const sf::Vector2u &windowSize, StateManager &manager) : GameState(windowSize),
 font(AssetManager::get().getDefaultFont(Fonts::ARCADE_N)), title("settings", font, 70),
 backButton(sf::Text("back", font, 20), true), applyButton(sf::Text("apply", font, 20), true), 
 keyBox({ 30.f, 30.f }, { windowSize.x / 2.f, windowSize.y / 2.f }, font, ""), playerOne("player one", font, 20),
-playerTwo("player two", font, 20), moveUp("move up", font, 15), moveDown("move down", font, 15),
-playerOneMoveUpToggle({sf::CircleShape(5.f, 3), sf::CircleShape(5.f, 3) }), playerOneMoveDownToggle(playerOneMoveUpToggle),
-playerTwoMoveUpToggle(playerOneMoveUpToggle), playerTwoMoveDownToggle(playerOneMoveUpToggle)
+playerTwo("player two", font, 20), moveUp("move up", font, 15), moveDown("move down", font, 15)
 {
 	title.setOrigin(getCenterPosition(title));
 	playerOne.setOrigin(getCenterPosition(playerOne));
@@ -28,8 +26,6 @@ playerTwoMoveUpToggle(playerOneMoveUpToggle), playerTwoMoveDownToggle(playerOneM
 	backButton.setOnclickEvent([&]() { manager.popState(); });
 	backButton.setColorPack(dm::ColorPack(sf::Color::White, sf::Color(150, 150, 150), sf::Color(50, 50, 50)));
 	backButton.setTextColor(sf::Color::Black);
-
-
 }
 
 void Settings::drawState(sf::RenderWindow &window) {
@@ -54,7 +50,7 @@ void Settings::unpause() {
 
 }
 
-void Settings::handleInput(StateManager &manager, const sf::Event &e, const sf::RenderWindow &window) {
+void Settings::handleInput(StateManager &manager, const sf::Event &e, const sf::RenderWindow &window, float deltaTime) {
 	keyBox.eventHandler(window, e);
 	
 	//This button will change states once it is clicked. When changing states, every member of this class will be 

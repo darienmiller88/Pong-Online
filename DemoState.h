@@ -8,7 +8,7 @@ class DemoState : public GameState{
 		void update(float deltaTime) override;
 		void pause() override;
 		void unpause() override;
-		void handleInput(StateManager& manager, const sf::Event& e, const sf::RenderWindow& window) override;
+		void handleInput(StateManager& manager, const sf::Event& e, const sf::RenderWindow& window, float deltaTime) override;
 	private:
 
 };

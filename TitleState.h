@@ -10,12 +10,11 @@ class TitleState : public GameState{
 		void update(float deltaTime) override;
 		void pause() override;
 		void unpause() override;
-		void handleInput(StateManager &manager, const sf::Event &e, const sf::RenderWindow &window) override;
+		void handleInput(StateManager &manager, const sf::Event &e, const sf::RenderWindow &window, float deltaTime) override;
 	private:
 		const int FONT_SIZE = 20;
 		sf::Text title;
 		sf::Font font;
 		sf::Clock clock;
-		sf::Vector2u windowSize;
 		RectangularButton onePlayer, twoPlayer, online, highScores, settings, quit;
 };
