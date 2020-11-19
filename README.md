@@ -3,5 +3,8 @@ A complete implementation of pong using my game engine, which will include menus
 
   ![](https://img.shields.io/badge/made%20by-DarienMiller-blue)
   ![](https://img.shields.io/badge/test-passing-green)
+  ![](https://img.shields.io/badge/c%2B%2B-100%25-blue)
+  ![](https://img.shields.io/badge/c%2B%2B-14-red)
+  ![](https://img.shields.io/badge/c%2B%2B-11-orange)
 
 
